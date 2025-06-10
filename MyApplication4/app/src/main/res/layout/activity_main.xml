@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#686052"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/threetimetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="340dp"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/onetimetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="300dp"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onefivetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="한시 오분 (1:05)"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <TextView
+        android:id="@+id/blackskirttextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="308dp"
+        android:text="검정치마"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="450dp"
+        android:layout_height="374dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:src="@drawable/myimage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--한시 오분 글자 옆 별 아이콘-->
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="-120dp"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/baseline_star_border_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spotButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/spotButton"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginBottom="-120dp"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/baseline_more_horiz_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/white" />
+
+    <!--재생 버튼 모음-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="710dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leftIcon"
+            android:layout_width="70dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/baseline_fast_rewind_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/rightIcon"
+            android:layout_width="77dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/baseline_fast_forward_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/stopIcon"
+            android:layout_width="77dp"
+            android:layout_height="70dp"
+            android:layout_margin="50dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="44dp"
+            android:src="@drawable/baseline_pause_24"
+            app:layout_constraintEnd_toStartOf="@+id/rightIcon"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@+id/leftIcon"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--밑에 있는 가운에 공유하기-->
+    <ImageView
+        android:id="@+id/horizonIcon"
+        android:layout_width="64dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/baseline_horizontal_rule_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/shareIcon"
+        android:layout_width="39dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="40dp"
+        android:rotation="180"
+        android:src="@drawable/baseline_crisis_alert_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/starIcon"
+        app:layout_constraintStart_toEndOf="@+id/chatIcon"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/chatIcon"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/baseline_chat_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/starIcon"
+        android:layout_width="40dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/baseline_list_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/leftsoundIcon"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="105dp"
+        android:src="@drawable/baseline_volume_mute_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/rightsoundIcon"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="105dp"
+        android:src="@drawable/baseline_volume_up_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+    <!--가장 밑 하단 바-->
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_margin="16dp"
+        android:max="100"
+        android:progress="73"
+        android:progressDrawable="@drawable/custom_seekbar"
+        android:thumb="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="200dp"
+        android:layout_height="5dp"
+        android:background="@drawable/rounded_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="307dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="710dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
