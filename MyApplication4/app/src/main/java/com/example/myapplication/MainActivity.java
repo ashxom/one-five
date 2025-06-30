@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
         spotButton = findViewById(R.id.spotButton);
         seekBar = findViewById(R.id.seekBar);
 
-        // 음악 연결
         mediaPlayer = MediaPlayer.create(this, R.raw.song);
-
-        // 재생바 설정
-        seekBar.setMax(mediaPlayer.getDuration());
+        mediaPlayer.setOnPreparedListener(mp -> {
+            seekBar.setMax(mp.getDuration());
+            updateTimeLabels(0, mp.getDuration());
+        });
 
         // 15초 전으로 이동
         leftIcon.setOnClickListener(v -> {
@@ -114,13 +114,12 @@ public class MainActivity extends AppCompatActivity {
 
     // SeekBar 업데이트 반복
     private void updateSeekBar() {
+        handler.removeCallbacksAndMessages(null);
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            int currentPosition = mediaPlayer.getCurrentPosition();
-            seekBar.setProgress(currentPosition);
-            updateTimeLabels(currentPosition, mediaPlayer.getDuration());
             handler.postDelayed(this::updateSeekBar, 500);
         }
     }
+
 
     @Override
     protected void onDestroy() {
