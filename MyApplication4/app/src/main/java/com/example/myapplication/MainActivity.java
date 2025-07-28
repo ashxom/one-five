@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    // pr 연습용 주석입니다
     @Override
     protected void onDestroy() {
         super.onDestroy();

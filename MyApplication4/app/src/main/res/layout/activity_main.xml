@@ -8,6 +8,8 @@
     android:background="#686052"
     tools:context=".MainActivity">
 
+    <!-- 연습용 pr용 주석 -->
+
     <TextView
         android:id="@+id/threetimetextView"
         android:layout_width="wrap_content"
